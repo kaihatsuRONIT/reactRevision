@@ -1,14 +1,17 @@
-import { Component, useState } from "react";
-import Header from "./Header";
+import { useState } from "react";
+import Headera, { Header2, ExportedFunc, passKey } from "./Header";
 
 function App() {
   const [counter,setCounter] = useState(0);
   return (
     <>
-      <Header />
+      <Headera />
+      <Header2/>
+      <ExportedFunc/> {/*imported withour default*/}
       <Comp/>
       <h1>Hello world</h1>
       <h2>Counter : {counter}</h2>
+      <h2>passkey : {passKey}</h2>  {/*as it is not a component, it does not require captial alphabet start*/}
       <button onClick={()=> setCounter(counter+1)}>increase counter</button> 
     </>
   )
