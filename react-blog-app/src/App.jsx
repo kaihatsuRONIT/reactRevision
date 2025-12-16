@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Headera, { Header2, ExportedFunc, passKey } from "./Header";
+import HeaderNew from "./HeaderNew";
 
 function App() {
   const [counter,setCounter] = useState(0);
@@ -13,6 +14,10 @@ function App() {
       <h2>Counter : {counter}</h2>
       <h2>passkey : {passKey}</h2>  {/*as it is not a component, it does not require captial alphabet start*/}
       <button onClick={()=> setCounter(counter+1)}>increase counter</button> 
+      <br />
+      <br />
+      <br />
+      <HeaderNew/>
     </>
   )
 }
