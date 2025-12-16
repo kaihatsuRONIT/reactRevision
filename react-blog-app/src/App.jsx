@@ -4,6 +4,7 @@ import HeaderNew from "./HeaderNew";
 
 function App() {
   const [counter,setCounter] = useState(0);
+  const [isView,setIsView] = useState(0);
   return (
     <>
       <Headera />
@@ -17,7 +18,14 @@ function App() {
       <br />
       <br />
       <br />
-      <HeaderNew/>
+      <button onClick={()=> setIsView(isView+1)}>toggle headerNew</button>
+      {
+        isView == 0? <h1>Zero</h1>
+        :isView == 1? <h1>One</h1>
+        :isView == 2? <h1>Two</h1>
+        :isView == 3? <HeaderNew/>
+        :<h1>Outta Universe</h1>
+      }
     </>
   )
 }
