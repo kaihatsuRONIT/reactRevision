@@ -1,10 +1,15 @@
 import { useState } from "react";
 import Headera, { Header2, ExportedFunc, passKey } from "./Header";
 import HeaderNew from "./HeaderNew";
+import One from "./One";
 
 function App() {
   const [counter,setCounter] = useState(0);
   const [isView,setIsView] = useState(0);
+  const user = {
+    name:"hello",
+    age:29
+  }
   return (
     <>
       <Headera />
@@ -21,7 +26,7 @@ function App() {
       <button onClick={()=> setIsView(isView+1)}>toggle headerNew</button>
       {
         isView == 0? <h1>Zero</h1>
-        :isView == 1? <h1>One</h1>
+        :isView == 1? <One user={user} univ="DTU" email="r@k.com" fruits={["apple","mango","banana"]}/>
         :isView == 2? <h1>Two</h1>
         :isView == 3? <HeaderNew/>
         :<h1>Outta Universe</h1>
