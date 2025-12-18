@@ -10,6 +10,9 @@ function App() {
     name:"hello",
     age:29
   }
+  function sayMyName(name){
+    alert("hello");
+  }
   return (
     <>
       <Headera />
@@ -26,7 +29,7 @@ function App() {
       <button onClick={()=> setIsView(isView+1)}>toggle headerNew</button>
       {
         isView == 0? <h1>Zero</h1>
-        :isView == 1? <One user={user} univ="DTU" email="r@k.com" fruits={["apple","mango","banana"]}/>
+        :isView == 1? <One user={user} univ="DTU" email="r@k.com" fruits={["apple","mango","banana"]} sayName={sayMyName}/>
         :isView == 2? <h1>Two</h1>
         :isView == 3? <HeaderNew/>
         :<h1>Outta Universe</h1>
