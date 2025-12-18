@@ -3,6 +3,7 @@ function One(props){ //recieve props by just typing without any destructuring; i
     return(
     <>
     <h1>{props.fruits[0]}</h1> {/* access with props. or through direct destructuring*/}
+    {/* <h1>{()=>props.sayName("ronit")}</h1> will not work as functions cannot be passed as react children */}
     </>
     )
 }
