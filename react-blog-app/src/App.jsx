@@ -14,6 +14,16 @@ function App() {
   function sayMyName(user){
     console.log(user)
   }
+  const [name,setName] = useState("");
+  const [password,setPassword] = useState("");
+  const [email,setEmail] = useState("");
+
+  function showCredentials(){
+    setName("")
+    setPassword("")
+    setEmail("")
+    console.table(name,password,email);
+  }
   return (
     <>
       <Headera />
@@ -35,6 +45,12 @@ function App() {
         :isView == 3? <HeaderNew/>
         :<h1>Outta Universe</h1>
       }
+      <hr/>
+      <input type="text" placeholder="Enter your name" value={name} onChange={(e)=> setName(e.target.value)}/>
+      <input type="password" placeholder="Enter your password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+      <input type="text" placeholder="Enter your email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+      <button onClick={()=>showCredentials()}>submit</button>
+      <h3>{name}</h3>
     </>
   )
 }
