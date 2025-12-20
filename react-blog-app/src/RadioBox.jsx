@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function RadioBox(){
     const [gender,setGender] = useState("Male")
-    const [city,setCity] = useState("");
+    const [city,setCity] = useState("delhi");
     function radioBoxHandler(event){
         setGender(event.target.value)
     }
