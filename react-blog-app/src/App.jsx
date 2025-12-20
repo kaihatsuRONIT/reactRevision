@@ -4,6 +4,7 @@ import HeaderNew from "./HeaderNew";
 import One from "./One";
 import CustomWrapper from "./CustomWrapper";
 import CheckBoxes from "./CheckBoxes";
+import RadioBox from "./RadioBox";
 
 function App() {
   const [counter,setCounter] = useState(0);
@@ -50,6 +51,10 @@ function App() {
       <hr />
       <br />
       <CheckBoxes/>
+      <br/>
+      <hr />
+      <br />
+      <RadioBox/>
     </>
   )
 }
