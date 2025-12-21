@@ -44,7 +44,7 @@ function Tables(){
                                 <td>{user.id}</td>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
-                                <td>{user.isLoggedIn}</td>
+                                <td>{user.isLoggedIn === true ? "true" : "false"}</td>
                             </tr>
                         ))
                     }
