@@ -28,6 +28,7 @@ function Tables(){
     return (
         <>
         <div>
+            <h1>created with loop over jsx</h1>
             <table border={1}>
                 <thead>
                     <tr>
