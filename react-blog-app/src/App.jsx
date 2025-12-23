@@ -7,6 +7,7 @@ import CheckBoxes from "./CheckBoxes";
 import RadioBox from "./RadioBox";
 import Tables from "./Tables";
 import User from "./User";
+import Clock from "./Clock";
 
 function App() {
   const [counter,setCounter] = useState(0);
@@ -94,6 +95,10 @@ function App() {
           </div>
         ))
       }
+      <br />
+      <hr />
+      <br />
+      <Clock/>
     </>
   )
 }
