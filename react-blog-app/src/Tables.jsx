@@ -1,30 +1,4 @@
-function Tables(){
-    const userData = [
-        {
-            id:"1",
-            name:"rk",
-            email:"rk@google.com",
-            isLoggedIn:true
-        },
-        {
-            id:"2",
-            name:"sk",
-            email:"sk@google.com",
-            isLoggedIn:true
-        },
-        {
-            id:"3",
-            name:"ak",
-            email:"ak@google.com",
-            isLoggedIn:false
-        },
-        {
-            id:"4",
-            name:"github",
-            email:"gt@google.com",
-            isLoggedIn:false
-        }
-    ]
+function Tables({userData}){
     return (
         <>
         <div>
@@ -41,7 +15,7 @@ function Tables(){
                 <tbody>
                     {
                         userData.map((user)=> (
-                            <tr>
+                            <tr key={user.id}>
                                 <td>{user.id}</td>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
