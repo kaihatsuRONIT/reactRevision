@@ -6,14 +6,11 @@ import CustomWrapper from "./CustomWrapper";
 import CheckBoxes from "./CheckBoxes";
 import RadioBox from "./RadioBox";
 import Tables from "./Tables";
+import User from "./User";
 
 function App() {
   const [counter,setCounter] = useState(0);
   const [isView,setIsView] = useState(0);
-  const user = {
-    name:"hello",
-    age:29
-  }
   function sayMyName(user){
     console.log(user)
   }
@@ -27,6 +24,33 @@ function App() {
     setEmail("")
     console.table(name,password,email);
   }
+  const userData = [
+        {
+            id:"1",
+            name:"rk",
+            email:"rk@google.com",
+            isLoggedIn:true
+        },
+        {
+            id:"2",
+            name:"sk",
+            email:"sk@google.com",
+            isLoggedIn:true
+        },
+        {
+            id:"3",
+            name:"ak",
+            email:"ak@google.com",
+            isLoggedIn:false
+        },
+        {
+            id:"4",
+            name:"github",
+            email:"gt@google.com",
+            isLoggedIn:false
+        }
+    ]
+  const color = ["red","green","blue","orange"]
   return (
     <>
       {/* <Headera />
@@ -59,7 +83,17 @@ function App() {
       <br />
       <hr />
       <br />
-      <Tables/>
+      <Tables userData={userData}/>
+      <br />
+      <hr />
+      <br />
+      {
+        userData.map((currUser)=>(
+          <div key={currUser.id}>
+            <User user={currUser} color={color[currUser.id-1]}/>
+          </div>
+        ))
+      }
     </>
   )
 }
