@@ -14,7 +14,6 @@ function CheckBoxes(){
         }
         
     }
-    console.log(choices)
     return (
         <>
         <h1> Handle checkboxes</h1>
