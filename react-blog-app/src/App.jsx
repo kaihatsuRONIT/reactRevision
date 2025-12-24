@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Headera, { Header2, ExportedFunc, passKey } from "./Header";
 import HeaderNew from "./HeaderNew";
 import One from "./One";
@@ -52,6 +52,9 @@ function App() {
         }
     ]
   const color = ["red","green","blue","orange"]
+  useEffect(()=>{
+    console.log(counter);
+  },[counter,userData])
   return (
     <>
       {/* <Headera />
@@ -62,7 +65,7 @@ function App() {
       <button onClick={()=> setIsView(isView+1)}>toggle headerNew</button>
       {
         isView == 0? <h1>Zero</h1>
-        :isView == 1? <One name="ronit" user={user} univ="DTU" email="r@k.com" fruits={["apple","mango","banana"]} sayName={sayMyName}/>
+        :isView == 1? <One name="ronit" univ="DTU" email="r@k.com" fruits={["apple","mango","banana"]} sayName={sayMyName}/>
         :isView == 2? <CustomWrapper/>
         :isView == 3? <HeaderNew/>
         :<h1>Outta Universe</h1>
@@ -99,6 +102,8 @@ function App() {
       <hr />
       <br />
       <Clock/>
+      <br />
+      <button onClick={()=> setCounter(counter+1)}>update Counter</button>
     </>
   )
 }
