@@ -1,5 +1,9 @@
+import { useEffect } from "react";
+
 function User({ user, color }) {
-    console.log(user);
+    useEffect(()=>{
+        console.log(user);
+    },[user])
     return (
         <>
             <div style={{ height: "200px", width: "300px", border: `2px solid ${color}`, color:`${color}`, margin:"10px",padding:"20px"}}>
