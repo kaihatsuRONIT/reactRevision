@@ -1,0 +1,8 @@
+.userHead{
+    display:flex;
+    flex-wrap:wrap
+    
+}
+.mainHeading{
+    color:red
+}

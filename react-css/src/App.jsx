@@ -1,8 +1,9 @@
 import { useState } from "react";
 import User from "./User";
+import './css/user.css' //any css file once imported, can be used literally anywhere
 
 function App() {
-  const users = [1, 2, 3, 4]
+  const users = [1, 2, 3, 4,5,6,7,8,9,10]
   const [cardStyle,setCardStyle] = useState({
         width: "200px",
         border: "1px solid #828282",
@@ -14,10 +15,10 @@ function App() {
     }
   return (
     <>
-      <h1>Inline css with ReactJs</h1>
+      <h1 className="myheading">Inline css with ReactJs</h1>
       <button onClick={()=> updateTheme("#2f2e2e","yellow")}>gray</button>
       <button onClick={()=> updateTheme("white","black")}>default</button>
-      <div style={{display:"flex", flexWrap:"wrap"}}>
+      <div className="userHead">
         {
         users.map((item) => {
           return(
