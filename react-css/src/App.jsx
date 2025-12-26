@@ -1,6 +1,7 @@
 import { useState } from "react";
 import User from "./User";
 import './css/user.css' //any css file once imported, can be used literally anywhere
+import Uncontrolled from "./Uncontrolled";
 
 function App() {
   const users = [1, 2, 3, 4,5,6,7,8,9,10]
@@ -29,6 +30,11 @@ function App() {
         })
       }
       </div>
+      <br />
+      <br />
+      <hr />
+      <br />
+      <Uncontrolled/>
     </>
   )
 }
