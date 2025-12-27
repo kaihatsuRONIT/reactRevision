@@ -27,7 +27,7 @@ function Uncontrolled() {
             <br />
             <br />
             <div>
-                <h1>Using querySelector or any method hook</h1>
+                <h1>Using querySelector or any method</h1>
                 <input className="inpt" placeholder="Enter your name" type="text" />
                 <h3 className="ech3">Temporary h3</h3>
                 <button onClick={tempHandler}>toggle changes </button>
