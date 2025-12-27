@@ -3,6 +3,7 @@ import User from "./User";
 import './css/user.css' //any css file once imported, can be used literally anywhere
 import Uncontrolled from "./Uncontrolled";
 import ForwardRef from "./ForwardRef";
+import FormComponent from "./FormComponent";
 
 function App() {
   const users = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -47,6 +48,10 @@ function App() {
       <h3>implementing forward ref</h3>
       <ForwardRef ref={inputRef} />
       <button onClick={()=>inputRefHandler()}>use above component</button>
+      <br />
+      <br />
+      <hr />
+      <FormComponent/>
     </>
   )
 }
