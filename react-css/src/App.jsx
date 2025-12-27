@@ -4,6 +4,7 @@ import './css/user.css' //any css file once imported, can be used literally anyw
 import Uncontrolled from "./Uncontrolled";
 import ForwardRef from "./ForwardRef";
 import FormComponent from "./FormComponent";
+import Loading from "./Loading";
 
 function App() {
   const users = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -52,6 +53,7 @@ function App() {
       <br />
       <hr />
       <FormComponent/>
+      <Loading/>
     </>
   )
 }
