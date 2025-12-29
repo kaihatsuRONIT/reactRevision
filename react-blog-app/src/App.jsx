@@ -10,6 +10,7 @@ import User from "./User";
 import Clock from "./Clock";
 import Counter from "./Counter";
 import DerivedState from "./DerivedState";
+import ComponentConnect from "./ComponentConnect";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -115,6 +116,9 @@ function App() {
       <hr />
       <br />
       <DerivedState/>
+      <br />
+      <hr />
+      <ComponentConnect/>
     </>
   )
 }
