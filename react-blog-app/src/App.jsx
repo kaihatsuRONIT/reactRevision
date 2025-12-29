@@ -9,6 +9,7 @@ import Tables from "./Tables";
 import User from "./User";
 import Clock from "./Clock";
 import Counter from "./Counter";
+import DerivedState from "./DerivedState";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -109,6 +110,11 @@ function App() {
       <button onClick={()=> setCounter(counter+1)}>update Counter</button>
       <button onClick={()=> setData(data+1)}>update Data</button>
       <button onClick={()=> setDisplay(!display)}>toggle</button>
+      <br />
+      <br />
+      <hr />
+      <br />
+      <DerivedState/>
     </>
   )
 }
