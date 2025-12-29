@@ -1,6 +1,7 @@
 import { use, useState } from "react";
 
 function DerivedState(){
+    //here i used the concept of derived states, where creating uneccessary states can cause performance issues so i used variables which stores changed states
     const [user,setUser] = useState("");
     const [userList,setUserList] = useState([]);
     const handleUser = ()=>{
