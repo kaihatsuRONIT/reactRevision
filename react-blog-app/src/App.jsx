@@ -11,6 +11,7 @@ import Clock from "./Clock";
 import Counter from "./Counter";
 import DerivedState from "./DerivedState";
 import ComponentConnect from "./ComponentConnect";
+import UpdateObjs from "./UpdateObjs";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -119,6 +120,10 @@ function App() {
       <br />
       <hr />
       <ComponentConnect/>
+      <br />
+      <br />
+      <hr />
+      <UpdateObjs/>
     </>
   )
 }
