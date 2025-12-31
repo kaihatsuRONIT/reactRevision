@@ -13,6 +13,7 @@ import DerivedState from "./DerivedState";
 import ComponentConnect from "./ComponentConnect";
 import UpdateObjs from "./UpdateObjs";
 import FormComponent from "./FormComponent";
+import CustomHook from "./CustomHook";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -129,6 +130,9 @@ function App() {
       <br />
       <hr />
       <FormComponent/>
+      <br />
+      <hr />
+      <CustomHook/>
     </>
   )
 }
