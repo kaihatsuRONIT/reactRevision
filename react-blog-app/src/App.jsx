@@ -14,6 +14,7 @@ import ComponentConnect from "./ComponentConnect";
 import UpdateObjs from "./UpdateObjs";
 import FormComponent from "./FormComponent";
 import CustomHook from "./CustomHook";
+import College from "./Context_API/College";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -133,6 +134,10 @@ function App() {
       <br />
       <hr />
       <CustomHook/>
+      <br />
+      <br />
+      <hr />
+      <College/>
     </>
   )
 }
