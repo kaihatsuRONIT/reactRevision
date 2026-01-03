@@ -1,8 +1,9 @@
-import { Link, Navigate } from "react-router";
+import { Link, Navigate, Outlet } from "react-router";
 import './header.css' 
 function NavBar() {
     return (
-        <div className="top">
+        <div>
+            <div className="top">
             <div>
                 <Link className="link" to={"/"}><h2>Logo</h2></Link>
             </div>
@@ -15,6 +16,8 @@ function NavBar() {
                     <li><Link to="/college" className="link"><h2>College</h2></Link></li>
                 </ul>
             </div>
+        </div>
+        <Outlet/>
         </div>
     )
 }

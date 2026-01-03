@@ -10,14 +10,15 @@ import College from "./Routes/College"
 function App() {
   return (
     <>
-      <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/collections" element={<Collections />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route element={<NavBar />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/collections" element={<Collections />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
         <Route path="/college" element={<College />}>
-          <Route path="student" element={<h1>Student Details</h1>} />
+          <Route index element={<h1>Student Details</h1>} />
           <Route path="department" element={<h1>Department Details</h1>} />
           <Route path="details" element={<h1>College Details</h1>} />
         </Route>
