@@ -1,16 +1,18 @@
-import { Link } from "react-router";
-
+import { Link, Navigate } from "react-router";
+import './header.css' 
 function NavBar() {
     return (
-        <div>
+        <div className="top">
             <div>
-                <Link className="header"><h1>Logo</h1></Link>
+                <Link className="link" to={"/"}><h2>Logo</h2></Link>
             </div>
-            <div>
-                <Link to="/"><h1>Home</h1></Link>
-                <Link to="/about"><h1>About</h1></Link>
-                <Link to="/collections"><h1>Collections</h1></Link>
-                <Link to="/contact"><h1>Contact Us</h1></Link>
+            <div className="header">
+                <ul>
+                    <li ><Link to="/" className="link"><h2>Home</h2></Link></li>
+                    <li><Link to="/about" className="link"><h2>About</h2></Link></li>
+                    <li><Link to="/collections" className="link"><h2>Collections</h2></Link></li>
+                    <li><Link to="/contact" className="link"><h2>Contact Us</h2></Link></li>
+                </ul>
             </div>
         </div>
     )
