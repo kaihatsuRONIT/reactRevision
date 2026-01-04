@@ -2,7 +2,7 @@
     display: flex;
     list-style-type: none;
     justify-content: space-around;
-    width: 400px;
+    width: 500px;
     margin: 0;
 }
 .header ul li{

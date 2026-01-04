@@ -6,6 +6,7 @@ import Collections from "./Routes/Collections"
 import Contact from "./Routes/Contact"
 import PageNotFound from "./PageNotFound"
 import College from "./Routes/College"
+import User from "./Routes/User"
 
 function App() {
   return (
@@ -13,11 +14,14 @@ function App() {
       <Routes>
         <Route element={<NavBar />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/collections" element={<Collections />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="user">
+            <Route path="about" element={<About />} />
+          </Route>
+          <Route path="collections" element={<Collections />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="users" element={<User/>}/>
         </Route>
-        <Route path="/college" element={<College />}>
+        <Route path="college" element={<College />}>
           <Route index element={<h1>Student Details</h1>} />
           <Route path="department" element={<h1>Department Details</h1>} />
           <Route path="details" element={<h1>College Details</h1>} />

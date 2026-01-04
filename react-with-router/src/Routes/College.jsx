@@ -3,8 +3,8 @@ function College() {
     return (
         <div style={{ textAlign: "center"}}>
             <h1>College Page</h1>
-            <div>
-                <Link to={"/"} style={{marginBottom:"15px"}}>go to home page</Link>
+            <div  style={{marginBottom:"15px"}}>
+                <Link to={"/"}>go to home page</Link>
             </div>
             <Link className="collegeLink" to={""}>student</Link>
             <Link className="collegeLink" to={"department"}>department</Link>
