@@ -1,4 +1,4 @@
-import { Link, Navigate, Route, Routes } from "react-router"
+import { Route, Routes } from "react-router"
 import NavBar from "./NavBar"
 import Home from "./Routes/Home"
 import About from "./Routes/About"
@@ -6,7 +6,8 @@ import Collections from "./Routes/Collections"
 import Contact from "./Routes/Contact"
 import PageNotFound from "./PageNotFound"
 import College from "./Routes/College"
-import User from "./Routes/User"
+import UserList from "./Routes/UserList"
+import UserDetails from "./Routes/UserDetails"
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           </Route>
           <Route path="collections" element={<Collections />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="users" element={<User/>}/>
+          <Route path="/users" element={<UserList/>}/>
+          <Route path="/users/:id" element={<UserDetails/>}/>
         </Route>
         <Route path="college" element={<College />}>
           <Route index element={<h1>Student Details</h1>} />
