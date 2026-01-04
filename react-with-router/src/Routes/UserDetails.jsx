@@ -34,7 +34,7 @@ function UserDetails(){
     const [currUser,setCurrUser] = useState({});
     function userHandler(){
         const tempUser = userData.filter((item)=>(
-            item.id == params.id
+            item.id === (Number)(params.id)
         ))
         setCurrUser(tempUser[0]);
     }
@@ -45,9 +45,9 @@ function UserDetails(){
         <>
         <h1 style={{textAlign:"center"}}>user details page</h1>
         <div style={{textAlign:"center"}}>
-            <h2>Name : {currUser.name}</h2>
-            <h2>Email : {currUser.email}</h2>
-            <h2>Followers : {currUser.followers}</h2>
+            <h2>Name : {currUser?.name}</h2>
+            <h2>Email : {currUser?.email}</h2>
+            <h2>Followers : {currUser?.followers}</h2>
             <br />
             <Link to={"/users"}>go to user list page</Link>
         </div>
