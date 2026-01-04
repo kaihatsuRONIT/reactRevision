@@ -38,6 +38,13 @@ function UserList(){
                     </div>
                 ))
             }
+            {
+                userData.map((item)=>(
+                    <div key={item.id} style={{margin:"20px"}}>
+                        <Link to={`/users/${item.id}/${item.name}`}>{item.name}</Link>
+                    </div>
+                ))
+            }
         </>
     )
 }

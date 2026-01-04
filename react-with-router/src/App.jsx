@@ -18,10 +18,10 @@ function App() {
           <Route path="user">
             <Route path="about" element={<About />} />
           </Route>
-          <Route path="collections" element={<Collections />} />
+          <Route path="collections/:country?" element={<Collections />} />
           <Route path="contact" element={<Contact />} />
           <Route path="/users" element={<UserList/>}/>
-          <Route path="/users/:id" element={<UserDetails/>}/>
+          <Route path="/users/:id/:name?" element={<UserDetails/>}/>
         </Route>
         <Route path="college" element={<College />}>
           <Route index element={<h1>Student Details</h1>} />
