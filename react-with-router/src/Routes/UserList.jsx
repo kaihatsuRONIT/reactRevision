@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router"
+import { Link } from "react-router"
 
 function UserList(){
     const userData = [

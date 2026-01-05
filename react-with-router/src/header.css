@@ -29,3 +29,9 @@ body{
 .collegeLink{
     margin: 40px;
 }
+.active{
+    color: rgb(94, 134, 1);
+}
+.custom-active{
+    color: yellowgreen;
+}
