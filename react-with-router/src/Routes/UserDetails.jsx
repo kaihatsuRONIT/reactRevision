@@ -45,11 +45,11 @@ function UserDetails(){
         <>
         <h1 style={{textAlign:"center"}}>user details page</h1>
         <div style={{textAlign:"center"}}>
-            <h2>Name : {currUser?.name}</h2>
-            <h2>Email : {currUser?.email}</h2>
-            <h2>Followers : {currUser?.followers}</h2>
+            <h2 className="text-xl">Name : {currUser?.name}</h2>
+            <h2 className="text-xl">Email : {currUser?.email}</h2>
+            <h2 className="text-xl">Followers : {currUser?.followers}</h2>
             <br />
-            <Link to={"/users"}>go to user list page</Link>
+            <Link className="underline" to={"/users"}>go to user list page</Link>
         </div>
         </>
     )
